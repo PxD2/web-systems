@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PXD2 Web Systems — Client sites we design, host, and hold</title>
+  <meta name="theme-color" content="#07080c" />
+  <link rel="canonical" href="https://pxd2.github.io/web-systems/" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#07080c; --ink:#e8ecf2; --dim:#9aa3b2; --line:#1d2230; --gold:#d4b483; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family: Barlow, system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+    a { color:var(--gold); }
+    .wrap { width:min(960px, calc(100% - 2rem)); margin:0 auto; }
+    header { padding:1.2rem 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; }
+    .mark { font-family:Oswald, sans-serif; letter-spacing:.16em; font-size:.92rem; }
+    main { padding:3.2rem 0 4rem; }
+    h1 { font-family:Oswald, sans-serif; font-size:clamp(2rem,5vw,3.4rem); line-height:1.05; margin:.3rem 0 1rem; }
+    .lead { color:var(--dim); max-width:58ch; margin-bottom:2rem; }
+    .card { border:1px solid var(--line); border-radius:14px; padding:1.25rem; background:#0c0e14; }
+    .btn { display:inline-block; margin-top:.6rem; border:1px solid var(--gold); color:var(--gold); padding:.5rem .9rem; border-radius:999px; text-decoration:none; font-weight:700; }
+    footer { border-top:1px solid var(--line); padding:1.4rem 0 2rem; color:var(--dim); font-size:.86rem; }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="mark">PXD2 · WEB SYSTEMS</div>
+    <nav><a href="https://pxd2.github.io/">Hall</a></nav>
+  </header>
+  <main class="wrap">
+    <p style="letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-size:.78rem;">Client bench</p>
+    <h1>We hold the page when the shop goes dark.</h1>
+    <p class="lead">PXD2 Web Systems designs, publishes, and holds public websites for other operators. First occupant: Galaxy Tours.</p>
+    <article class="card">
+      <h2>Galaxy Tours</h2>
+      <p>Star Wars and Indiana Jones expeditions in Tunisia. Continuity site while galaxytours.com is down.</p>
+      <a class="btn" href="./galaxy-tours/">Open the site</a>
+    </article>
+  </main>
+  <footer class="wrap">PXD2 · Arizona · pxdsquared@gmail.com · (928) 457-6404</footer>
+</body>
+</html>

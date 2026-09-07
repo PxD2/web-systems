@@ -1,2 +1,7 @@
-# web-systems
-PXD2 Web Systems — client websites we design, host, and hold for others.
+# PXD2 Web Systems
+
+Live: https://pxd2.github.io/web-systems/
+
+Galaxy Tours: https://pxd2.github.io/web-systems/galaxy-tours/
+
+Repo: https://github.com/PxD2/web-systems
