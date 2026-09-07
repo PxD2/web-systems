@@ -1,7 +1,5 @@
-# PXD2 Web Systems
+# web-systems
 
-Live: https://pxd2.github.io/web-systems/
+Archived. The GitHub Actions Pages deploy was removed after it failed (Pages was never enabled on this repo).
 
-Galaxy Tours: https://pxd2.github.io/web-systems/galaxy-tours/
-
-Repo: https://github.com/PxD2/web-systems
+No site is published from here.
