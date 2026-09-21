@@ -13,11 +13,11 @@ The hall is [pxd2.github.io](https://pxd2.github.io/). This repo is the **contro
 
 ## Two pipes
 
-1. **GitHub Pages** — static sites on the hall or on a project URL.
-2. **FTP / SFTP / rsync** — boxes we already hold. Secrets stay out of git (`ftp/.env.example`).
+1. **GitHub Pages** — static sites on the hall or on a project URL. Static pipe only.
+2. **HOLD / FTP / SFTP / rsync** — sellable product pipe (accounts, mirror deploy, secrets out of git). Templates under `ftp/` (`.env.example`). Product ICD open — not "git that acts like FTP."
 
 Pages on *this* repo is optional. Enable it under Settings → Pages → GitHub Actions if you want `pxd2.github.io/web-systems/` as a second copy. The hall annex already publishes from `PxD2.github.io`.
 
 ## Add a site
 
-Slug in `sites.json` → files in `sites/<slug>/` or a dedicated repo → pick Pages or FTP → link it on the hall annex and on [github.com/PxD2](https://github.com/PxD2).
+Slug in `sites.json` → files in `sites/<slug>/` or a dedicated repo → pick Pages or HOLD FTP → link it on the hall annex and on [github.com/PxD2](https://github.com/PxD2).
