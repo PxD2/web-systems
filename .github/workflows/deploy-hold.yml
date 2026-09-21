@@ -1,0 +1,57 @@
+name: deploy-hold
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: sites.json slug / HOLD tenant
+        required: true
+        default: lab
+  push:
+    paths:
+      - "sites/**"
+jobs:
+  hold-sftp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve slug
+        id: slug
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ inputs.slug }}" >> "$GITHUB_OUTPUT"
+          else
+            # first changed sites/<slug>/
+            s=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | awk -F/ '/^sites\// {print $2; exit}')
+            echo "value=${s:-lab}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Require HOLD secrets
+        env:
+          HOLD_HOST: ${{ secrets.HOLD_HOST }}
+          HOLD_USER: ${{ secrets.HOLD_USER }}
+          HOLD_KEY: ${{ secrets.HOLD_KEY }}
+        run: |
+          if [ -z "$HOLD_HOST" ] || [ -z "$HOLD_USER" ] || [ -z "$HOLD_KEY" ]; then
+            echo "HOLD_HOST / HOLD_USER / HOLD_KEY secrets required for live mirror."
+            echo "Local proof path: ftp/proof/stage-mirror.sh (no secrets)."
+            exit 1
+          fi
+      - name: Mirror sites/<slug> → HOLD SFTP
+        env:
+          HOLD_HOST: ${{ secrets.HOLD_HOST }}
+          HOLD_PORT: ${{ secrets.HOLD_PORT || 22 }}
+          HOLD_USER: ${{ secrets.HOLD_USER }}
+          HOLD_KEY: ${{ secrets.HOLD_KEY }}
+          HOLD_ROOT: ${{ secrets.HOLD_ROOT || 'public' }}
+          SLUG: ${{ steps.slug.outputs.value }}
+        run: |
+          set -euo pipefail
+          SRC="sites/${SLUG}"
+          test -d "$SRC"
+          install -m 600 /dev/null key.pem
+          printf '%s\n' "$HOLD_KEY" > key.pem
+          sudo apt-get update -y && sudo apt-get install -y openssh-client rsync
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          ssh-keyscan -p "$HOLD_PORT" "$HOLD_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+          rsync -avz -e "ssh -i key.pem -p $HOLD_PORT -o StrictHostKeyChecking=accept-new" \
+            --delete "$SRC/" "${HOLD_USER}@${HOLD_HOST}:${HOLD_ROOT}/"
+          rm -f key.pem

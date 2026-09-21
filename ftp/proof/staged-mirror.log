@@ -1,0 +1,7 @@
+HOLD staged mirror proof
+ts=2026-09-21T18:43:50Z
+src=sites/lab
+dst=ftp/proof/fake-hold/hold_lab/public
+files:
+  ftp/proof/fake-hold/hold_lab/public/index.html
+result=OK
