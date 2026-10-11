@@ -19,6 +19,15 @@ Every site PXD2 builds is kept by **PXD2 Vault** (`PxD2.github.io/tools/vault.py
 
 Every sale goes **straight to the client's own** payment account or wallet. PXD2 never collects, holds or forwards a customer's money. Keeping it that way keeps PXD2 a web studio, not a payment processor (which would need money-transmitter licensing).
 
+## Win the client: the store upgrade pitch
+
+1. Pick a business whose online store underserves them.
+2. On base1: `python tools/store_import.py https://their-store.com --name "Their Store" --serve` (in PxD2.github.io). It reads their public catalog the way their own storefront does (Shopify, WooCommerce, or schema.org product data), respects robots.txt, and builds a **private** VR store preview of their real products on your machine.
+3. Show the owner their store, rebuilt as a walk-through 3D/VR shop with every payment option.
+4. Nothing goes public until they sign. Then it moves to `clients/<slug>/` with their own pay links, their approval of their images and text, and a `.pxd` name.
+
+Pitch previews never get published or sent as a public link: a page that looks like their store under someone else's control would read as impersonation.
+
 ## Build a client VR store
 
 1. Copy `pxd2.github.io/clients/_template/` to `clients/<slug>/`.
