@@ -10,6 +10,8 @@ The hall is [pxd2.github.io](https://pxd2.github.io/). This repo is the **contro
 - Open builds index (Comparee Hub map): [pxd2.github.io/sites/open-builds](https://pxd2.github.io/sites/open-builds/)
 - Registry: [`sites.json`](./sites.json)
 - How to ship: [`HOSTING.md`](./HOSTING.md)
+- The client offer (one-time build, VR stores, payments): [`OFFER.md`](./OFFER.md)
+- PXD2 Names: [pxd2.github.io/names](https://pxd2.github.io/names/) · private `.pxd` ending via PXD2 Root
 
 ## Two pipes
 

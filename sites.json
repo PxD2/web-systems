@@ -1,14 +1,88 @@
 {
   "owner": "PxD2",
-  "updated": "2026-09-25",
-  "pipes": ["github-pages", "ftp", "sftp", "rsync", "hold"],
+  "updated": "2026-10-11",
+  "pipes": [
+    "github-pages",
+    "ftp",
+    "sftp",
+    "rsync",
+    "hold"
+  ],
   "sites": [
-    {"slug": "floor", "name": "PXD2 floor", "live": "https://pxd2.github.io/", "repo": "PxD2/PxD2.github.io", "pipe": "github-pages"},
-    {"slug": "company", "name": "Company", "live": "https://pxd2.github.io/company/", "repo": "PxD2/PxD2.github.io", "pipe": "github-pages"},
-    {"slug": "cad2", "name": "Helix CAD", "live": "https://pxd2.github.io/cad2/", "repo": "PxD2/PxD2.github.io", "pipe": "github-pages"},
-    {"slug": "meshworks", "name": "Meshworks", "live": "https://pxd2.github.io/meshworks/", "repo": "PxD2/PxD2.github.io", "pipe": "github-pages", "hold_slug": "meshworks", "notes": "Scan cards on Pages. Blobs on HOLD /hold/meshworks/blobs/. Git publishes; HOLD is the disk."},
-    {"slug": "pxd2spaces", "name": "Hackspace", "live": "https://pxd2.github.io/pxd2spaces/", "repo": "PxD2/pxd2spaces", "pipe": "github-pages"},
-    {"slug": "open-builds", "name": "Open builds index", "live": "https://pxd2.github.io/sites/open-builds/", "repo": "PxD2/web-systems", "source": "https://comparee.ai/projects", "pipe": "github-pages", "notes": "Index of 348 public Comparee Hub listings + extracted GitHub repos. Not a fork of their reviews."},
-    {"slug": "tipsyhippy", "name": "Tipsy Hippy Grill", "live": null, "repo": "PxD2/tipsyhippy", "pipe": "pages-or-ftp"}
-  ]
+    {
+      "slug": "floor",
+      "name": "PXD2 floor",
+      "live": "https://pxd2.github.io/",
+      "repo": "PxD2/PxD2.github.io",
+      "pipe": "github-pages",
+      "pxd": "floor.pxd"
+    },
+    {
+      "slug": "company",
+      "name": "Company",
+      "live": "https://pxd2.github.io/company/",
+      "repo": "PxD2/PxD2.github.io",
+      "pipe": "github-pages",
+      "pxd": "company.pxd"
+    },
+    {
+      "slug": "cad2",
+      "name": "Helix CAD",
+      "live": "https://pxd2.github.io/cad2/",
+      "repo": "PxD2/PxD2.github.io",
+      "pipe": "github-pages",
+      "pxd": "cad2.pxd"
+    },
+    {
+      "slug": "meshworks",
+      "name": "Meshworks",
+      "live": "https://pxd2.github.io/meshworks/",
+      "repo": "PxD2/PxD2.github.io",
+      "pipe": "github-pages",
+      "hold_slug": "meshworks",
+      "notes": "Scan cards on Pages. Blobs on HOLD /hold/meshworks/blobs/. Git publishes; HOLD is the disk.",
+      "pxd": "meshworks.pxd"
+    },
+    {
+      "slug": "pxd2spaces",
+      "name": "Hackspace",
+      "live": "https://pxd2.github.io/pxd2spaces/",
+      "repo": "PxD2/pxd2spaces",
+      "pipe": "github-pages",
+      "pxd": "pxd2spaces.pxd"
+    },
+    {
+      "slug": "open-builds",
+      "name": "Open builds index",
+      "live": "https://pxd2.github.io/sites/open-builds/",
+      "repo": "PxD2/web-systems",
+      "source": "https://comparee.ai/projects",
+      "pipe": "github-pages",
+      "notes": "Index of 348 public Comparee Hub listings + extracted GitHub repos. Not a fork of their reviews.",
+      "pxd": "open-builds.pxd"
+    },
+    {
+      "slug": "tipsyhippy",
+      "name": "Tipsy Hippy Grill",
+      "live": null,
+      "repo": "PxD2/tipsyhippy",
+      "pipe": "pages-or-ftp",
+      "pxd": "tipsyhippy.pxd"
+    },
+    {
+      "slug": "propshop",
+      "name": "PXD2 Prop Shop",
+      "live": "https://pxd2.github.io/clients/propshop/",
+      "repo": "PxD2/PxD2.github.io",
+      "pipe": "github-pages",
+      "kind": "vr-store",
+      "pxd": "propshop.pxd",
+      "notes": "3D/WebXR storefront on the shared VR store engine. Example items until real inventory and pay links are set."
+    }
+  ],
+  "names": {
+    "registry": "https://pxd2.github.io/names.json",
+    "public": "https://pxd2.github.io/<name>",
+    "private_tld": ".pxd (alias .pxd2) via PXD2 Root on base1/Pi"
+  }
 }
