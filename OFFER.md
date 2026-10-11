@@ -11,6 +11,10 @@
 
 **After launch:** inventory and product updates. The client edits their own `store.json`, or PXD2 does it per update.
 
+## Lifetime: no site lost to time
+
+Every site PXD2 builds is kept by **PXD2 Vault** (`PxD2.github.io/tools/vault.py`) in four places at once: full git history on GitHub, a dated offline archive on PXD2's own disk (base1 / HOLD), Internet Archive snapshots of every page, and optionally a permanent Arweave copy paid once inside the build fee (Arweave's one-time payment is designed to cover 200+ years of storage). The client's names stay in the PXD2 Names registry, which is itself vaulted the same way.
+
 ## How the money moves
 
 Every sale goes **straight to the client's own** payment account or wallet. PXD2 never collects, holds or forwards a customer's money. Keeping it that way keeps PXD2 a web studio, not a payment processor (which would need money-transmitter licensing).
