@@ -11,6 +11,7 @@ The hall is [pxd2.github.io](https://pxd2.github.io/). This repo is the **contro
 - Registry: [`sites.json`](./sites.json)
 - How to ship: [`HOSTING.md`](./HOSTING.md)
 - The client offer (one-time build, VR stores, payments): [`OFFER.md`](./OFFER.md)
+- VR Net and sub-hubs: [`SUBHUBS.md`](./SUBHUBS.md) · [pxd2.github.io/vr](https://pxd2.github.io/vr/)
 - PXD2 Names: [pxd2.github.io/names](https://pxd2.github.io/names/) · private `.pxd` ending via PXD2 Root
 
 ## Two pipes
